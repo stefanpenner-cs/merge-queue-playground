@@ -1,0 +1,15 @@
+name: queue-check
+
+on:
+  pull_request:
+  merge_group:
+
+jobs:
+  queue-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate queue tokens
+        run: ./scripts/validate-queue.sh
