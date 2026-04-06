@@ -1,6 +1,7 @@
 name: queue-check
 
 on:
+  push:
   pull_request:
   merge_group:
 
